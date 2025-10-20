@@ -129,21 +129,28 @@ Invoke-RestMethod -Uri http://localhost:5066/hashtags -Method Post -Body $corpo 
 
 ```
 cp3/
-├── README.md                    # Documentação principal
-├── VIDEO-GUIDE.md               # Guia para gravação do vídeo
-├── CHECKLIST.md                 # Lista de verificação
-├── test-api.ps1                 # Script de teste PowerShell
-└── cp3/
-    ├── Models/
-    │   ├── RequisicaoHashtag.cs     # Modelo da requisição
-    │   ├── RespostaHashtag.cs       # Modelo da resposta
-    │   ├── RequisicaoOllama.cs      # Modelo para chamada ao Ollama
-    │   └── RespostaOllama.cs        # Modelo da resposta do Ollama
-    ├── Services/
-    │   └── ServicoOllama.cs         # Serviço de integração com Ollama
-    ├── Program.cs                    # Configuração da API e endpoints
-    ├── cp3.http                      # 9 casos de teste HTTP
-    └── cp3.csproj                   # Configuração do projeto
+├── 📄 README.md                    # Documentação principal
+├── 📄 .gitignore                   # Arquivos a ignorar no git
+├── 📄 curl-examples.sh             # Exemplos cURL (Linux/Mac)
+├── 📄 test-api.ps1                 # Script de teste PowerShell (Windows)
+├── 📄 cp3.sln                      # Solution .NET
+├── 📄 global.json                  # Configuração SDK .NET
+│
+└── cp3/                            # Projeto principal
+    ├── 📄 Program.cs               # Configuração da API e endpoints
+    ├── 📄 cp3.csproj               # Arquivo de projeto .NET 8
+    ├── 📄 cp3.http                 # Testes HTTP (9 casos de teste)
+    ├── 📄 appsettings.json         # Configurações da aplicação
+    ├── 📄 appsettings.Development.json
+    │
+    ├── Models/                     # Modelos de dados
+    │   ├── HashtagRequest.cs       # Request do endpoint
+    │   ├── HashtagResponse.cs      # Response do endpoint
+    │   ├── OllamaRequest.cs        # Request para Ollama API
+    │   └── OllamaResponse.cs       # Response do Ollama API
+    │
+    └── Services/                   # Serviços
+        └── OllamaService.cs        # Integração com Ollama
 ```
 
 ## 🔧 Tecnologias Utilizadas
