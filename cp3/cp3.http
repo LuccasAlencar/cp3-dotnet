@@ -1,0 +1,89 @@
+@cp3_HostAddress = http://localhost:5066
+
+### Teste 1: Gerar 8 hashtags com modelo específico
+POST {{cp3_HostAddress}}/hashtags
+Content-Type: application/json
+
+{
+  "texto": "Explorando as belas praias do Rio de Janeiro com vistas incríveis do pôr do sol e comida brasileira deliciosa",
+  "quantidade": 8,
+  "modelo": "llama3.2:3b"
+}
+
+### Teste 2: Gerar hashtags com quantidade padrão (10)
+POST {{cp3_HostAddress}}/hashtags
+Content-Type: application/json
+
+{
+  "texto": "Aprendendo .NET 8 Minimal APIs e integrando com modelos de IA para soluções inovadoras",
+  "modelo": "llama3.2:3b"
+}
+
+### Teste 3: Gerar 5 hashtags
+POST {{cp3_HostAddress}}/hashtags
+Content-Type: application/json
+
+{
+  "texto": "Inovação tecnológica, inteligência artificial, aprendizado de máquina e o futuro do desenvolvimento de software",
+  "quantidade": 5,
+  "modelo": "llama3.2:3b"
+}
+
+### Teste 4: Teste com quantidade máxima (30)
+POST {{cp3_HostAddress}}/hashtags
+Content-Type: application/json
+
+{
+  "texto": "Conscientização sobre mudanças climáticas, sustentabilidade, energia renovável, proteção ambiental, tecnologia verde",
+  "quantidade": 30,
+  "modelo": "llama3.2:3b"
+}
+
+### Teste 5: Teste com quantidade > 30 (deve limitar a 30)
+POST {{cp3_HostAddress}}/hashtags
+Content-Type: application/json
+
+{
+  "texto": "Estratégias de marketing digital para crescimento e engajamento nas redes sociais",
+  "quantidade": 50,
+  "modelo": "llama3.2:3b"
+}
+
+### Teste 6: Quantidade ausente (deve usar padrão 10)
+POST {{cp3_HostAddress}}/hashtags
+Content-Type: application/json
+
+{
+  "texto": "Aventuras de viagem pelo mundo, explorando novas culturas e culinárias"
+}
+
+### Teste 7: Erro - Texto vazio
+POST {{cp3_HostAddress}}/hashtags
+Content-Type: application/json
+
+{
+  "texto": "",
+  "quantidade": 5,
+  "modelo": "llama3.2:3b"
+}
+
+### Teste 8: Erro - Texto ausente
+POST {{cp3_HostAddress}}/hashtags
+Content-Type: application/json
+
+{
+  "quantidade": 5,
+  "modelo": "llama3.2:3b"
+}
+
+### Teste 9: Teste com diferentes temas
+POST {{cp3_HostAddress}}/hashtags
+Content-Type: application/json
+
+{
+  "texto": "Desenvolvimento de software com inteligência artificial e aprendizado de máquina usando .NET",
+  "quantidade": 7,
+  "modelo": "llama3.2:3b"
+}
+
+###
