@@ -1,4 +1,6 @@
 # Hashtag Generator API
+## 👨‍💻 Desenvolvido por Luccas de Alencar Rufino | RM 558253
+
 
 Uma Minimal API em .NET 8 que gera hashtags relevantes usando o Ollama (LLM local).
 
@@ -22,7 +24,7 @@ ollama pull llama3.2:3b
 
 1. **Clone o repositório**
 ```bash
-cd c:\Users\lucca\RiderProjects\cp3\cp3
+cd [local do arquivo]
 ```
 
 2. **Execute a aplicação**
@@ -261,6 +263,6 @@ O arquivo `cp3.http` contém **9 casos de teste** completos:
 
 - **`test-api.ps1`** - Script automatizado de testes
 
-## 👨‍💻 Desenvolvido por Lucca
+## 👨‍💻 Desenvolvido por Luccas de Alencar Rufino | RM 558253
 
 Projeto criado para demonstrar integração de .NET Minimal APIs com Ollama para geração de conteúdo com IA.
